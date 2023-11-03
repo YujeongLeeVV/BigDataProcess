@@ -133,14 +133,6 @@ while j<=len(list2):
 
 list4=sorted(list5, key=lambda item: list(item.keys())[0])
 
-
-print(list3, "list3")
-print(list4, "list4")
-print(list5, "list5")
-print(dic2,"dic2")
-print(dic3,"dic3")
-
-
 i=0
 for row in range(2,76):
     write.cell(row=row, column=8, value=list(list4[i].values())[0])
