@@ -6,6 +6,7 @@ read=load_workbook(filename='student.xlsx')
 sheet_ranges=read['Sheet1']
 wf=Workbook()
 write=wf.active
+write.title='Sheet1'
 
 list1=[]
 list3=[]
