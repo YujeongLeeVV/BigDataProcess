@@ -22,7 +22,7 @@ for row in range(2,76):
     total+=sheet_ranges.cell(row=row, column=3).value*0.3
     total+=sheet_ranges.cell(row=row, column=4).value*0.35
     total+=sheet_ranges.cell(row=row, column=5).value*0.34
-    total+=sheet_ranges.cell(row=row, column=6).value*0.01
+    total+=sheet_ranges.cell(row=row, column=6).value*0.1
     write.cell(row=row, column=7, value=total)
     num=sheet_ranges.cell(row=row, column=7).value
     dic={row:total}        
