@@ -10,8 +10,16 @@ write.title='Sheet1'
 
 list1=[]
 list3=[]
+list5=[]
 dic={}
 dic2={}
+aa=0
+a0=0 
+bb=0 
+b0=0
+cc=0
+c0=0
+f=0
 
 for row in range(1,76):
     for column in range(1,9):
@@ -32,39 +40,51 @@ for row in range(2,76):
 list2=sorted(list1, key=lambda item: list(item.values())[0], reverse=True)
 
 i=0
-while i<len(list2):
+j=1
+
+while j<=len(list2):
     total=list(list2[i].values())[0]
     if total<40:
         dic2={list(list2[i].keys())[0]:'F'}
         list3.append(dic2)
+        f+=1
         
-    elif i<len(list2)*0.15:
+    elif j<=len(list2)*0.15:
         dic2={list(list2[i].keys())[0]:'A+'}
         list3.append(dic2)      
+        aa+=1
         
-    elif i<len(list2)*0.30:
+    elif j<len(list2)*0.30:
         dic2={list(list2[i].keys())[0]:'A0'}
         list3.append(dic2)
+        a0+=1
         
-    elif i<len(list2)*0.50:
+    elif j<len(list2)*0.50:
         dic2={list(list2[i].keys())[0]:'B+'}
         list3.append(dic2)
+        bb+=1
         
-    elif i<len(list2)*0.70:
+    elif j<len(list2)*0.70:
         dic2={list(list2[i].keys())[0]:'B0'}
-        list3.append(dic2)    
+        list3.append(dic2)   
+        b0+=1
         
-    elif i<len(list2)*0.85:
+    elif j<len(list2)*0.85:
         dic2={list(list2[i].keys())[0]:'C+'}
         list3.append(dic2)    
+        cc+=1
         
-    elif i<len(list2)*1:
+    elif j<len(list2)*1:
         dic2={list(list2[i].keys())[0]:'C0'}
         list3.append(dic2)
+        c0+=1
         
     i+=1
+    j+=1
     
 list4=sorted(list3, key=lambda item: list(item.keys())[0])
+
+
 
 i=0
 for row in range(2,76):
