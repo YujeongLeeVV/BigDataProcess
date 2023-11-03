@@ -49,7 +49,7 @@ while j<=len(list2):
         list3.append(dic2)
         f+=1
         
-    elif j<=len(list2)*0.15:
+    elif j<len(list2)*0.15:
         dic2={list(list2[i].keys())[0]:'A+'}
         list3.append(dic2)      
         aa+=1
