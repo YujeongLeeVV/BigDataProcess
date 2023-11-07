@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 import datetime
-taxi=[]
-dic={}
 
 uberInput=input()
 uberOutput=input()
+
+taxi=[]
+dic={}
 
 with open(uberInput, "rt") as fd:
     with open(uberOutput, "wt") as f:
