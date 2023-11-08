@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-movieInput=input()
-movieOutput=input()
+movieInput, movieOutput =input().split()
 
 list1=[]
 dic={}
