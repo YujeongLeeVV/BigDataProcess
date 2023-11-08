@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 import datetime
 
-uberInput=input()
-uberOutput=input()
-
+uberInput, uberOutput=input().split()
 taxi=[]
 dic={}
 
