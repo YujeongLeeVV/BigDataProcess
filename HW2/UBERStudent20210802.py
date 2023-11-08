@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import datetime
-
-uberInput, uberOutput=input().split()
+import sys
 taxi=[]
 dic={}
+
+uberInput=sys.argv[1]
+uberOutput=sys.argv[2]
 
 with open(uberInput, "rt") as fd:
     with open(uberOutput, "wt") as f:
