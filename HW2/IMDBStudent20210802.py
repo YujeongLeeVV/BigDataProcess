@@ -14,11 +14,12 @@ with open(movieInput, "rt") as fd:
     lines=data.splitlines()
     for line in lines:
         movieInfo=line.split("::")
-        genre=movieInfo[2]
-        if genre in dic.keys():
-            dic[genre]+=1
-        else:
-            dic[genre]=1
+        genres=movieInfo[2].split("|")
+        for genre in genres:
+            if genre in dic.keys():
+                dic[genre]+=1                
+            else:
+                dic[genre]=1
         
         
 with open(movieOutput, "wt") as f:
