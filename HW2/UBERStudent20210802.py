@@ -32,6 +32,14 @@ with open(uberInput, "rt") as fd:
             else:
                 day="SUN"
                 
-            f.write(f"{uberInfo[0]},{day} {uberInfo[2]},{uberInfo[3]}\n")
+            region=uberInfo[0]
+            
+            if region in dic:
+                dic[region]+=f"{region},{day} {uberInfo[2]},{uberInfo[3]}\n"
+            else:
+                dic[region]=f"{region},{day} {uberInfo[2]},{uberInfo[3]}\n"
+            
+        for value in dic.values():
+            f.write(f"{value}")
         
 
