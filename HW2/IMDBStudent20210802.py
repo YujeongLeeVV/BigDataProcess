@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+import sys
 
-movieInput, movieOutput =input().split()
+movieInput=sys.argv[1]
+movieOutput=sys.argv[2]
+
 
 list1=[]
 dic={}
