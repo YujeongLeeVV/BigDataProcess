@@ -36,13 +36,13 @@ with open(uberInput, "rt") as fd:
             vehicle=uberInfo[2]
             trip=uberInfo[3]
             
-            if (region, day) in dic:
-                dic[region, day, 0]+=vehicle
-                dic[region, day, 1]+=trip
+            if (region, day, 1) in dic:
+                dic[region, day, 0]+=int(vehicle)
+                dic[region, day, 1]+=int(trip)
                 
             else:
-                dic[region, day, 0]=vehicle
-                dic[region, day, 1]=trip
+                dic[region, day, 0]=int(vehicle)
+                dic[region, day, 1]=int(trip)
         
         i=0            
         
