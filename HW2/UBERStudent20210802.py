@@ -33,13 +33,21 @@ with open(uberInput, "rt") as fd:
                 day="SUN"
                 
             region=uberInfo[0]
+            vehicle=uberInfo[2]
+            trip=uberInfo[3]
             
-            if region in dic:
-                dic[region]+=f"{region},{day} {uberInfo[2]},{uberInfo[3]}\n"
+            if (region, day) in dic:
+                dic[region, day, 0]+=vehicle
+                dic[region, day, 1]+=trip
+                
             else:
-                dic[region]=f"{region},{day} {uberInfo[2]},{uberInfo[3]}\n"
-            
-        for value in dic.values():
-            f.write(f"{value}")
+                dic[region, day, 0]=vehicle
+                dic[region, day, 1]=trip
         
-
+        i=0            
+        
+        for key in dic.keys():
+            #f.write(f"{key}, {value}\n")
+            if i%2==0:
+                f.write(f"{key[0]},{key[1]} {dic[key[0],key[1],0]},{dic[key[0],key[1],1]}\n")
+            i+=1
